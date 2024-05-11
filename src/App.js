@@ -3,7 +3,7 @@ import { useState } from "react";
 import AnimalShow from './AnimalShow';
 
 function getRandomAnimal() {
-    const animals = ['birds', 'cat', 'cow', 'dog', 'gator', 'horse'];
+    const animals = ['bird', 'cat', 'cow', 'dog', 'gator', 'horse'];
 
     return animals[Math.floor(Math.random() * animals.length)];
 }
@@ -20,9 +20,9 @@ function App() {
     });
 
     return (
-        <div>
+        <div className="app">
             <button onClick={handleClick}>Add Animal</button>
-            <div>{renderedAnimals}</div>
+            <div className='animal-list'>{renderedAnimals}</div>
         </div>
     );
 }
